@@ -41,12 +41,12 @@ const Hero = () => {
           {/* Main heading */}
           <h1 className={`text-5xl md:text-7xl font-bold ${mounted ? 'fade-in-up fade-in-up-delay-1' : 'opacity-0'}`}>
             Hi, I'm{' '}
-            <span className="gradient-text">Alex Johnson</span>
+            <span className="gradient-text">Peviorgents Pimbirimano</span>
           </h1>
           
           {/* Subtitle */}
           <p className={`text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto ${mounted ? 'fade-in-up fade-in-up-delay-2' : 'opacity-0'}`}>
-            A passionate <strong className="text-primary">Frontend Developer</strong> who loves creating beautiful, 
+            A passionate <strong className="text-primary">Software Developer</strong> who loves creating beautiful, 
             functional, and user-friendly digital experiences.
           </p>
           

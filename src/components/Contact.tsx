@@ -29,19 +29,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex.johnson@example.com',
-      href: 'mailto:alex.johnson@example.com'
+      value: 'peviorgentspimbirimano@gmail.com',
+      href: 'mailto:peviorgentspimbirimano@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+263 78 471 4309',
+      href: 'tel:+263784714309'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: '20901 New Marimba, Harare, Zimbabwe',
       href: '#'
     }
   ];
@@ -79,7 +79,7 @@ const Contact = () => {
                     <Label htmlFor="firstName">First Name</Label>
                     <Input
                       id="firstName"
-                      placeholder="John"
+                      placeholder="Peviorgents"
                       required
                       className="glass-card border-primary/20"
                     />
@@ -88,7 +88,7 @@ const Contact = () => {
                     <Label htmlFor="lastName">Last Name</Label>
                     <Input
                       id="lastName"
-                      placeholder="Doe"
+                      placeholder="Pimbirimano"
                       required
                       className="glass-card border-primary/20"
                     />
@@ -100,7 +100,7 @@ const Contact = () => {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="peviorgents@example.com"
                     required
                     className="glass-card border-primary/20"
                   />

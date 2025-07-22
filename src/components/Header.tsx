@@ -41,7 +41,7 @@ const Header = () => {
             onClick={() => scrollToSection('home')}
             className="text-2xl font-bold gradient-text"
           >
-            AJ
+            Peviorgents
           </button>
 
           {/* Desktop Navigation */}

@@ -27,9 +27,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">Alex Johnson</h3>
+            <h3 className="text-2xl font-bold gradient-text">Peviorgents Pimbirimano</h3>
             <p className="text-muted-foreground">
-              Frontend Developer passionate about creating beautiful, 
+              Software Developer passionate about creating beautiful, 
               functional web experiences.
             </p>
             <div className="flex space-x-4">
@@ -68,9 +68,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Get In Touch</h3>
             <div className="space-y-2 text-muted-foreground">
-              <p>alex.johnson@example.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>peviorgentspimbirimano@gmail.com</p>
+              <p>+263 78 471 4309</p>
+              <p>20901 New Marimba, Harare, Zimbabwe</p>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Alex Johnson. All rights reserved.
+            © {currentYear} Peviorgents Pimbirimano. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm flex items-center">
             Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> using React & Tailwind CSS
