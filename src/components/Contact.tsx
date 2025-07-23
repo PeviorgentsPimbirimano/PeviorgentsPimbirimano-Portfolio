@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import emailjs from 'emailjs-com'; // ✅ NEW
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,14 +16,33 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-    }, 2000);
+    const form = e.target as HTMLFormElement;
+
+    emailjs
+      .sendForm(
+        'service_xgp942f',    // 🔁 Replace with your actual service ID
+        'template_4g6mrvw',   // 🔁 Replace with your actual template ID
+        form,
+        'MBHej6Ol8bSICSByW'     // 🔁 Replace with your actual public key
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          toast({
+            title: "Message sent!",
+            description: "Thank you for reaching out. I'll get back to you soon.",
+          });
+          form.reset();
+        },
+        (error) => {
+          setIsSubmitting(false);
+          toast({
+            title: "Failed to send message.",
+            description: "Please try again later or contact me directly via email.",
+          });
+          console.error("EmailJS Error:", error);
+        }
+      );
   };
 
   const contactInfo = [
@@ -55,7 +75,6 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
@@ -79,6 +98,7 @@ const Contact = () => {
                     <Label htmlFor="firstName">First Name</Label>
                     <Input
                       id="firstName"
+                      name="first_name" // ✅ Added
                       placeholder="Peviorgents"
                       required
                       className="glass-card border-primary/20"
@@ -88,6 +108,7 @@ const Contact = () => {
                     <Label htmlFor="lastName">Last Name</Label>
                     <Input
                       id="lastName"
+                      name="last_name" // ✅ Added
                       placeholder="Pimbirimano"
                       required
                       className="glass-card border-primary/20"
@@ -99,6 +120,7 @@ const Contact = () => {
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
+                    name="email" // ✅ Added
                     type="email"
                     placeholder="peviorgents@example.com"
                     required
@@ -110,6 +132,7 @@ const Contact = () => {
                   <Label htmlFor="subject">Subject</Label>
                   <Input
                     id="subject"
+                    name="subject" // ✅ Added
                     placeholder="Project collaboration"
                     required
                     className="glass-card border-primary/20"
@@ -120,6 +143,7 @@ const Contact = () => {
                   <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
+                    name="message" // ✅ Added
                     placeholder="Tell me about your project..."
                     rows={5}
                     required
@@ -145,9 +169,8 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
+          {/* Contact Info Cards */}
           <div className="space-y-8">
-            {/* Contact Details */}
             <Card className="glass-card border-primary/10">
               <CardHeader>
                 <CardTitle className="text-2xl">Contact Information</CardTitle>
@@ -171,7 +194,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Social Links */}
             <Card className="glass-card border-primary/10">
               <CardHeader>
                 <CardTitle className="text-2xl">Follow Me</CardTitle>
@@ -194,7 +216,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Availability */}
             <Card className="glass-card border-primary/10">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3">

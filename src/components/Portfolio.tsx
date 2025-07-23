@@ -10,32 +10,32 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and PostgreSQL featuring user authentication, payment processing, and admin dashboard.',
+      title: 'SpotOn (Parking App)',
+      description: 'A full-stack parking finder app that enables users to search for, book, and manage parking spots. The project involved responsive design, map integration, and role-based dashboards for drivers and owners.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'CSS'],
       category: 'fullstack',
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'parking-finder-app-navy.vercel.app',
+      githubUrl: 'https://github.com/PeviorgentsPimbirimano/parking_finder_app',
       featured: true
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Buildlink (Construction Company Website)',
+      description: 'Contributed to the responsive redesign and frontend development of BuildLink’s corporate website. Ensured clear communication of services, mobile compatibility, and fast load times.',
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind'],
+      technologies: ['React', 'JavaScript', 'CSS', 'Figma'],
       category: 'frontend',
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'buildlink-xi.vercel.app',
+      githubUrl: 'https://github.com/PeviorgentsPimbirimano/buildlink',
       featured: true
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts, interactive maps, and personalized weather alerts.',
+      title: 'InternIn',
+      description: 'I am also developing InternIn, a web application designed to connect students seeking internships or industrial attachments with employers. ',
       image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-      technologies: ['Vue.js', 'Chart.js', 'OpenWeather API'],
+      technologies: ['React', 'TypeScript', 'Tailwind'],
       category: 'frontend',
       liveUrl: '#',
       githubUrl: '#',
@@ -43,37 +43,15 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: 'Blog CMS',
-      description: 'A headless content management system with markdown support, SEO optimization, and multi-author capabilities.',
+      title: 'Smart Farms',
+      description: 'Currently, I am working on Smart Farms, a drone-integrated web platform aimed at revolutionizing agriculture through precision farming. The platform will utilize aerial data for real-time crop monitoring and land management, delivered through an intuitive web interface.',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
-      technologies: ['Next.js', 'Sanity', 'Vercel'],
+      technologies: ['Nextjs', 'TypeScript', 'CSS'],
       category: 'fullstack',
       liveUrl: '#',
       githubUrl: '#',
       featured: false
     },
-    {
-      id: 5,
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website with smooth animations, dark mode support, and optimized performance.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
-      technologies: ['React', 'Tailwind', 'Framer Motion'],
-      category: 'frontend',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Social Media Dashboard',
-      description: 'An analytics dashboard for social media management with data visualization, scheduling, and performance tracking.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      technologies: ['React', 'D3.js', 'Express', 'MongoDB'],
-      category: 'fullstack',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    }
   ];
 
   const filters = [
@@ -137,14 +115,18 @@ const Portfolio = () => {
                   </Badge>
                 )}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Button size="sm" variant="outline" className="bg-white/10 border-white/30 text-white">
-                    <Eye className="h-4 w-4 mr-2" />
-                    Preview
-                  </Button>
-                  <Button size="sm" variant="outline" className="bg-white/10 border-white/30 text-white">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
-                  </Button>
+                  <a href={`https://${project.liveUrl}`} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline" className="bg-white/10 border-white/30 text-white">
+                      <Eye className="h-4 w-4 mr-2" />
+                      Preview
+                    </Button>
+                  </a>
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline" className="bg-white/10 border-white/30 text-white">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </Button>
+                  </a>
                 </div>
               </div>
 
@@ -168,13 +150,17 @@ const Portfolio = () => {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
-                  <Button size="sm" className="flex-1 bg-primary text-primary-foreground">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button size="sm" variant="outline" className="border-primary/30">
-                    <Github className="h-4 w-4" />
-                  </Button>
+                  <a href={`https://${project.liveUrl}`} target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <Button size="sm" className="w-full bg-primary text-primary-foreground">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Live Demo
+                    </Button>
+                  </a>
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline" className="border-primary/30">
+                      <Github className="h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
