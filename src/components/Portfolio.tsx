@@ -57,7 +57,7 @@ const Portfolio = () => {
       id: 5,
       title: 'A B L E',
       description: 'I worked on A B L E, a charity website for an organisation which empowers individuals with disabilities by providing accessible resources, community support, and personalized tools for skill development.',
-      image: '/public/able.png',
+      image: '/able.png',
       technologies: ['React.js', 'JavaScript', 'CSS'],
       category: 'frontend',
       liveUrl: 'able-charity-web.vercel.app',
