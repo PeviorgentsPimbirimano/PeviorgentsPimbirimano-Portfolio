@@ -46,12 +46,12 @@ const Portfolio = () => {
       id: 4,
       title: 'Agrimo (Smart Farming Platform)',
       description: 'Worked on AGRIMO, an agriculture-focused website designed to empower farmers and agribusinesses with innovative digital solutions. The platform provides tools for crop management, farm analytics, and sustainable agricultural practices, all accessible through an intuitive and user-friendly interface.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
+      image: '/agrimo.png',
       technologies: ['Nextjs', 'TypeScript', 'CSS'],
       category: 'frontend',
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
+      liveUrl: 'agrimo-rho.vercel.app/',
+      githubUrl: 'https://github.com/PeviorgentsPimbirimano/Agrimo',
+      featured: true
     },
     {
       id: 5,
